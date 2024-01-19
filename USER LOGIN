@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>USER LOGIN</h1>
+  <div class="mb-3">
+  <label for="uname">username:</label>
+  <input type="text" id="uname" name="uname" value=""><br><br>
+  </div>
+  <div class="mb-3">
+  <label for="pwd">password:</label>
+  <input type="password" name="password" value=""><br><br>
+  </div>
+  <a href="afroz2.html"><button>login</button></a>
+</center>
+</body>
+</html>
