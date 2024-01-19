@@ -1,0 +1,35 @@
+<?php 
+  if($_POST) {
+  
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "userlogin";
+  
+  // Database Connection
+  $conn = new mysqli($servername, $username, $password, $database);
+  
+  // Check if there's an error in the connection
+  if($conn->connect_error) {
+    die("Connection Error: " . $conn->connect_error);
+  }
+  
+  // User Details
+  $userName = $_POST["userName"];
+  $password = $_POST["password"];
+  $profile = $_POST["profile"];
+  
+  
+  // SQL Query
+  $sql = "INSERT INTO inputdata (UserName, Password, profile) 
+          VALUES ('$userName', '$password', '$profile')";
+ 
+  if($conn->query($sql)) {
+    echo "Data stored successfully";
+  } else {
+    echo "Something went wrong: " . $conn->error;
+  }
+   
+  $conn->close();
+}
+?>
